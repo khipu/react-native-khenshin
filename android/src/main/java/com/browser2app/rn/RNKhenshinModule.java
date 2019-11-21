@@ -1,4 +1,4 @@
-package com.nantrack.khipu.browser2app;
+package com.browser2app.rn;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,14 +16,14 @@ import com.facebook.react.bridge.ReactMethod;
 import static android.app.Activity.RESULT_OK;
 
 
-public class RNKhipuModule extends ReactContextBaseJavaModule implements ActivityEventListener {
-  private static final String TAG = RNKhipuModule.class.getName();
+public class RNKhenshinModule extends ReactContextBaseJavaModule implements ActivityEventListener {
+  private static final String TAG = RNKhenshinModule.class.getName();
   private Khenshin khenshin;
   private final ReactApplicationContext reactContext;
   private final int START_PAYMENT_REQUEST_CODE = 1001;
   private Callback callback;
 
-  public RNKhipuModule(ReactApplicationContext reactContext, Khenshin khenshin) {
+  public RNKhenshinModule(ReactApplicationContext reactContext, Khenshin khenshin) {
     super(reactContext);
     this.reactContext = reactContext;
     this.khenshin = khenshin;
@@ -32,7 +32,7 @@ public class RNKhipuModule extends ReactContextBaseJavaModule implements Activit
 
   @Override
   public String getName() {
-    return "RNKhipu";
+    return "RNKhenshin";
   }
 
   @ReactMethod

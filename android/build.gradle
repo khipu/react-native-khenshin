@@ -37,6 +37,6 @@ allprojects {
     }
     dependencies {
       implementation 'com.facebook.react:react-native:+'
-      implementation 'com.browser2app:khenshin:5.2.0'
+      implementation 'com.browser2app:khenshin:5.3.5'
     }
 }

@@ -36,7 +36,7 @@ implementation project(':react-native-khipu-browser2app')
 ```
 import com.browser2app.khenshin.KhenshinInterface;
 import com.nantrack.khipu.browser2app.KhipuApplication;
-import com.nantrack.khipu.browser2app.RNKhipuPackage;
+import com.nantrack.khipu.browser2app.RNKhenshinPackage;
 ```
 
 4. Added The following lines / modifications in your MainApplication.java (**react-native >= 0.60.0**)

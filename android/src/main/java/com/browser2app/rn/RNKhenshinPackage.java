@@ -1,4 +1,4 @@
-package com.nantrack.khipu.browser2app;
+package com.browser2app.rn;
 
 import android.app.Application;
 
@@ -17,12 +17,12 @@ import com.browser2app.khenshin.Khenshin;
 import com.browser2app.khenshin.KhenshinInterface;
 
 
-public class RNKhipuPackage implements ReactPackage, KhenshinApplication {
+public class RNKhenshinPackage implements ReactPackage, KhenshinApplication {
     private Khenshin khenshin;
     private Application app;
-    RNKhipuModule khipuModule;
+    RNKhenshinModule khenshinModule;
 
-    public RNKhipuPackage(Application app) {
+    public RNKhenshinPackage(Application app) {
         this.app = app;
         Khenshin.KhenshinBuilder builder = new Khenshin.KhenshinBuilder();
         builder.setAllowCredentialsSaving(true);
@@ -39,7 +39,7 @@ public class RNKhipuPackage implements ReactPackage, KhenshinApplication {
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        khipuModule = new RNKhipuModule(reactContext, this.khenshin);
+        khenshinModule = new RNKhenshinModule(reactContext, this.khenshin);
         return Arrays.<NativeModule>asList(khipuModule);
     }
 
