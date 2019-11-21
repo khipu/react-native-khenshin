@@ -1,0 +1,22 @@
+{
+  "name": "react-native-khipu-browser2app",
+  "version": "1.0.0",
+  "description": "Wrapper react-native para la tecnología browser2app de khipu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native-khipu",
+    "khipu"
+  ],
+  "author": "Julio Araya <julioarayacerda@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  },
+  "devDependencies": {
+    "react": "15.4.0",
+    "react-native": "^0.41.2"
+  }
+}
