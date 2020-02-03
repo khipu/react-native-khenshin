@@ -40,7 +40,7 @@ public class RNKhenshinPackage implements ReactPackage, KhenshinApplication {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         khenshinModule = new RNKhenshinModule(reactContext, this.khenshin);
-        return Arrays.<NativeModule>asList(khipuModule);
+        return Arrays.<NativeModule>asList(khenshinModule);
     }
 
     // Deprecated from RN 0.47
