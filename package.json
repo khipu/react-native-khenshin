@@ -1,6 +1,6 @@
 {
   "name": "react-native-khenshin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wrapper react-native para la tecnología browser2app de khipu",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,9 @@
   },
   "keywords": [
     "react-native-khenshin",
-    "khenshin"
+    "khenshin",
+    "khipu",
+    "browser2app"
   ],
   "author": "Julio Araya <julio.araya@khipu.com>",
   "license": "MIT",

@@ -2,7 +2,7 @@
 
 ## Add the library to your project
 
-    npm install https://github.com/khipu/react-native-khenshin#1.0.1 --save
+    npm install https://github.com/khipu/react-native-khenshin#1.0.2 --save
 
 ## Install and configure
 
@@ -12,10 +12,31 @@
 ## Usage
 
 ```javascript
+import React from 'react';
+import {TouchableOpacity, Text} from 'react-native';
 import Khipu from 'react-native-khenshin';
 
-Khipu.startPaymentById('paymentId').then(({status, result}) => {
-  console.log('transaction status: ' + status);
-  console.log(result);
-});
+export default class MyApp extends React.Component {
+ 
+  onStartPayment = () => {
+    Khipu.startPaymentById('paymentId').then(({status, result}) => {
+      if (status === 'CONCILIATING') {
+         // khipu is conciliating the payment
+      } else if (status === 'USER_CANCELED') {
+        // The user cancelled the transaction
+      } else {
+        // Error!, see `result` for details
+        console.log(result);
+      }
+    });
+  };
+ 
+  render() {
+    return (
+      <TouchableOpacity onPress={this.onStartPayment}>
+        <Text>Start payment</Text>
+      </TouchableOpacity>
+    );
+  }
+}
 ```
