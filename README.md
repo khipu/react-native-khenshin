@@ -1,4 +1,3 @@
-
 # react-native-khipu
 
 ## Getting started
@@ -21,40 +20,54 @@
 #### Android
 
 1. Append the following lines to `android/settings.gradle`:
+
 ```
 include ':react-native-khenshin'
-project(':react-native-khenshin').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-khenshin/android')
+project(':react-native-khenshin').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-khenshin/android')
 ```
-2. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
+
+2. Add the following lines inside the dependencies block in `android/app/build.gradle`:
+
 ```
 implementation 'com.browser2app:khenshin:5.4.2'
 implementation project(':react-native-khenshin')
 ```
 
-3. Open up `android/app/src/main/java/[...]/MainActivity.java` and add these imports at the top of the file
+3. Add the following lines to tour `android/build.gradle`:
+
 ```
-import com.browser2app.khenshin.KhenshinApplication;
-import com.browser2app.khenshin.KhenshinInterface;
-import com.browser2app.rn.RNKhenshinPackage;
+allprojects {
+    repositories {
+      ....
+      maven {
+        url 'https://dev.khipu.com/nexus/content/repositories/khenshin'
+      }
+      ...
+    }
+}
 ```
 
 4. Added The following lines / modifications in your MainApplication.java (**react-native >= 0.60.0**)
 
 ```
+....
+import com.browser2app.khenshin.KhenshinApplication;
+import com.browser2app.khenshin.KhenshinInterface;
+import com.browser2app.rn.RNKhenshinPackage;
 
-// IMPORTANT!!!: Added ", KhipuApplication" to the implements list
-public class MainApplication extends Application implements ReactApplication, KhipuApplication {
+// IMPORTANT!!!: Add ", KhenshinApplication" to the implements list
+public class MainApplication extends Application implements ReactApplication, KhenshinApplication {
   // --> Add the following code 
   private MainApplication mainApp;
-  private RNKhipuPackage khipuPackage;
+  private RNKhenshinPackage khipuPackage;
 
   public MainApplication() {
-    mainApp = this;
+      mainApp = this;
   }
-  
+
   @Override
   public KhenshinInterface getKhenshin() {
-    return khipuPackage.getKhenshin();
+      return khipuPackage.getKhenshin();
   }
   // --> End
   
@@ -68,14 +81,14 @@ public class MainApplication extends Application implements ReactApplication, Kh
 ```
 @Override
 protected List<ReactPackage> getPackages() {
-    ...
-    khipuPackage = new RNKhipuPackage(mainApp);
+    //...
+    khipuPackage = new RNKhenshinPackage(mainApp);
     packages.add(khipuPackage);
     return packages;
 }
 ```
 
-6. Added **react-native.config.js** if your using **react-native > 0.60.0**
+6. Add or edit **react-native.config.js** if your using **react-native > 0.60.0**
 
 ```
 // react-native.config.js
