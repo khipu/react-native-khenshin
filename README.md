@@ -1,8 +1,8 @@
 # react-native-khenshin
 
-## Add the library to yor project
+## Add the library to your project
 
-    npm install https://github.com/khipu/react-native-khenshin --save
+    npm install https://github.com/khipu/react-native-khenshin#1.0.1 --save
 
 ## Install and configure
 
