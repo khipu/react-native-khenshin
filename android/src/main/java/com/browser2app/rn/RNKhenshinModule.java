@@ -56,7 +56,7 @@ public class RNKhenshinModule extends ReactContextBaseJavaModule implements Acti
       String exitStatus = "";
       String result = "";
       if (resultCode == RESULT_OK) {
-        exitStatus = "PAYMENT_OK";
+        exitStatus = "CONCILIATING";
         result = "{ \"paymentId\": \"" + data.getStringExtra(KhenshinConstants.EXTRA_PAYMENT_ID) + "\" }";
 
       } else {

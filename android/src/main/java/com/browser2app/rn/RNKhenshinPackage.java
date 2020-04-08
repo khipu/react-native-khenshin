@@ -27,8 +27,7 @@ public class RNKhenshinPackage implements ReactPackage, KhenshinApplication {
         Khenshin.KhenshinBuilder builder = new Khenshin.KhenshinBuilder();
         builder.setAllowCredentialsSaving(true);
         builder.setAPIUrl("https://khipu.com/app/enc/");
-        builder.setAutomatonTimeout(60);
-        builder.setAutoSubmitIfComplete(true);
+        builder.setAutomatonTimeout(90);
         builder.setClearCookiesBeforeStart(true);
         builder.setDecimalSeparator('.');
         builder.setGroupingSeparator(',');
