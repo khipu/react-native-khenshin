@@ -53,16 +53,14 @@ public class RNKhenshinModule extends ReactContextBaseJavaModule implements Acti
     Log.d(TAG, "resultCode: " + resultCode);
     Log.d(TAG, "data: " + data);
     if (requestCode == START_PAYMENT_REQUEST_CODE && data != null) {
-      String exitStatus = "";
-      String result = "";
-      if (resultCode == RESULT_OK) {
-        exitStatus = "CONCILIATING";
-        result = "{ \"paymentId\": \"" + data.getStringExtra(KhenshinConstants.EXTRA_PAYMENT_ID) + "\" }";
+      String status = data.getStringExtra(KhenshinConstants.EXTRA_FAILURE_REASON);
+      String exitStatus = resultCode == RESULT_OK || status == "TASK_FINISHED"
+          ? "CONCILIATING"
+          : status;
+      String result = resultCode == RESULT_OK || status == "TASK_FINISHED"
+          ? "{ \"paymentId\": \"" + data.getStringExtra(KhenshinConstants.EXTRA_PAYMENT_ID) + "\" }"
+          : "{\"message\": \"" + data.getStringExtra(KhenshinConstants.EXTRA_RESULT_MESSAGE) + "\"}";
 
-      } else {
-        exitStatus = data.getStringExtra(KhenshinConstants.EXTRA_FAILURE_REASON);
-        result = "{}";
-      }
       Log.d(TAG, exitStatus);
       Log.d(TAG, result);
       callback.invoke(exitStatus, result);
