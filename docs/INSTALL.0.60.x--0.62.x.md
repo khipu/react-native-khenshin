@@ -1,4 +1,4 @@
-# Install instructions for react-native 0.62.x
+# Install instructions for react-native from 0.60.x to 0.62.x
 
 ## iOS
 
