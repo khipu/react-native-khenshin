@@ -14,6 +14,8 @@
 ```javascript
 import Khipu from 'react-native-khenshin';
 
-Khipu.startPaymentById('paymentId').then(payment => console.log(payment));
-
+Khipu.startPaymentById('paymentId').then(({status, result}) => {
+  console.log('transaction status: ' + status);
+  console.log(result);
+});
 ```
