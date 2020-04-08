@@ -33,6 +33,7 @@ public class RNKhenshinPackage implements ReactPackage, KhenshinApplication {
         builder.setGroupingSeparator(',');
         builder.setSkipExitPage(false);
         builder.setApplication(this.app);
+        builder.setDebug(false);
         this.khenshin = builder.build();
     }
 

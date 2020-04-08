@@ -11,21 +11,21 @@
 
 ## Android
 
-1. Append the following lines to `android/settings.gradle`:
+### Append the following lines to `android/settings.gradle`:
 
 ```
 include ':react-native-khenshin'
 project(':react-native-khenshin').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-khenshin/android')
 ```
 
-2. Add the following lines inside the dependencies block in `android/app/build.gradle`:
+### Add the following lines inside the dependencies block in `android/app/build.gradle`:
 
 ```
 implementation 'com.browser2app:khenshin:5.4.2'
 implementation project(':react-native-khenshin')
 ```
 
-3. Add the following lines to tour `android/build.gradle`:
+### Add the following lines to tour `android/build.gradle`:
 
 ```
 allprojects {
@@ -39,7 +39,7 @@ allprojects {
 }
 ```
 
-4. Add The following modifications in your `MainApplication.java`
+### Add The following modifications in your `MainApplication.java`
 
 ```
 ....
@@ -68,7 +68,7 @@ public class MainApplication extends Application implements ReactApplication, Kh
 
 ```
 
-5. Add the following code inside the `getPackages()` method
+### Add the following code inside the `getPackages()` method
   
 ```
 @Override
@@ -80,7 +80,7 @@ protected List<ReactPackage> getPackages() {
 }
 ```
 
-6. Add or edit `react-native.config.js`
+### Add or edit `react-native.config.js`
 
 ```
 // react-native.config.js
