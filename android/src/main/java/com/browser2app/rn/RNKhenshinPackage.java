@@ -27,20 +27,20 @@ public class RNKhenshinPackage implements ReactPackage, KhenshinApplication {
         Khenshin.KhenshinBuilder builder = new Khenshin.KhenshinBuilder();
         builder.setAllowCredentialsSaving(true);
         builder.setAPIUrl("https://khipu.com/app/enc/");
-        builder.setAutomatonTimeout(60);
-        builder.setAutoSubmitIfComplete(true);
+        builder.setAutomatonTimeout(90);
         builder.setClearCookiesBeforeStart(true);
         builder.setDecimalSeparator('.');
         builder.setGroupingSeparator(',');
         builder.setSkipExitPage(false);
         builder.setApplication(this.app);
+        builder.setDebug(false);
         this.khenshin = builder.build();
     }
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         khenshinModule = new RNKhenshinModule(reactContext, this.khenshin);
-        return Arrays.<NativeModule>asList(khipuModule);
+        return Arrays.<NativeModule>asList(khenshinModule);
     }
 
     // Deprecated from RN 0.47
