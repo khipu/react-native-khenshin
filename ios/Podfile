@@ -6,6 +6,6 @@ target 'RNKhipu' do
   use_frameworks!
 
   # Pods for RNKhipu
-  pod 'khenshin', :git => 'https://github.com/khipu/khenshin-pod.git', :tag => '1.548'
+  pod 'khenshin', :git => 'https://github.com/khipu/khenshin-pod.git', :tag => '1.611'
 
 end
