@@ -4,10 +4,15 @@
 
 > iOS implementation is still in progress
 
-[//]: <> (1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`)
-[//]: <> (2. Go to `node_modules` ➜ `react-native-khenshin` and add `RNKhipu.xcodeproj`)
-[//]: <> (3. In XCode, in the project navigator, select your project. Add `libRNKhipu.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`)
-[//]: <> (4. Run your project `Cmd+R`)
+Add the following line to yout Podfile
+
+    pod 'RNKhenshin', :path => '../node_modules/react-native-khenshin'
+
+
+The run pod install
+
+    pod install
+
 
 ## Android
 

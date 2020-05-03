@@ -5,6 +5,7 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface RNKhipu : NSObject <RCTBridgeModule>
+@interface RNKhenshin : NSObject <RCTBridgeModule>
 
 @end
+  
