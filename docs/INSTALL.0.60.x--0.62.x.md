@@ -4,14 +4,11 @@
 
 > iOS implementation is still in progress
 
-Add the following line to yout Podfile
+Run pod install
 
-    pod 'RNKhenshin', :path => '../node_modules/react-native-khenshin'
-
-
-The run pod install
-
+    cd ios
     pod install
+    cd ..
 
 
 ## Android

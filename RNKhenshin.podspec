@@ -1,8 +1,4 @@
-# LICENSE file in the root directory of this source tree.
-
 require "json"
-
-khenshin_version = '1.611'
 
 package = JSON.parse(File.read(File.join(__dir__, ".", ".", "package.json")))
 version = package['version']
@@ -27,14 +23,14 @@ Pod::Spec.new do |s|
   s.platforms              = { :ios => "9.0" }
   s.compiler_flags         = '-Wno-nullability-completeness'
   s.source                 = source
-  s.source_files           = "RNKhenshin/**/*.{h,m}"
-  s.preserve_paths         = "package.json", "LICENSE", "LICENSE-docs"
+  s.source_files           = "ios/**/*.{h,m}"
+  s.preserve_paths         = "package.json", "ios", "index.js"
   s.header_dir             = "RNKhenshin"
   s.pod_target_xcconfig    = {
                                "USE_HEADERMAP" => "YES",
                                "CLANG_CXX_LANGUAGE_STANDARD" => "c++14",
                                "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/RNKhenshin\""
                              }
-  s.dependency "khenshin", khenshin_version
-  s.dependency "React"
+  s.dependency "khenshin", '1.611'
+  s.dependency "React-Core"
 end
