@@ -1,20 +1,18 @@
 {
   "name": "react-native-khenshin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Wrapper react-native para la tecnología browser2app de khipu",
   "homepage": "https://github.com/khipu/react-native-khenshin",
+  "documentation": "https://github.com/khipu/react-native-khenshin/blob/master/README.md",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "Julio Araya <julio.araya@khipu.com>",
+  "license": "MIT",
   "keywords": [
     "react-native-khenshin",
     "khenshin",
     "khipu",
     "browser2app"
   ],
-  "author": "Julio Araya <julio.araya@khipu.com>",
-  "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2"
   },
