@@ -1,4 +1,3 @@
-
 #import "RNKhenshin.h"
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
@@ -14,8 +13,6 @@
 
 - (void) configureEngine {
   @try {
-    __typeof(self) __weak welf = self;
-
     [KhenshinInterface initWithBuilderBlock:^(KhenshinBuilder *builder) {
       builder.APIUrl = @"https://khipu.com/app/enc/";
       builder.allowCredentialsSaving = YES;
@@ -43,24 +40,21 @@ RCT_EXPORT_METHOD(startPaymentById
   : (RCTResponseSenderBlock) callback
 ) {
   [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-
     if (![KhenshinInterface validateInitialization]) {
+      [self configureEngine];
+    }
 
-            [self configureEngine];
-        }
-
-    [KhipuKhenshinInterface startEngineWithPaymentExternalId:paymentId
-          userIdentifier:@""
-       isExternalPayment:NO
-                animated:YES
-                 success:^(NSURL *returnURL) {
-                   DebugLog(@"¡Hemos vuelto!");
-                   callback(@[ @"CONCILIATING", @"{\"success\": true}" ]);
-                 }
-                 failure:^(NSURL *returnURL) {
-                   DebugLog(@"¡Hemos vuelto con error!");
-                   callback(@[ @"TASK_DUMPED", @"{\"success\": false}" ]);
-                 }];
+    [KhenshinInterface startEngineWithPaymentExternalId:paymentId
+                                         userIdentifier:@""
+                                      isExternalPayment:NO
+                                               animated:YES
+                                                success:^(NSURL *returnURL) {
+                                                  callback(@[ @"CONCILIATING", @"{\"success\": true}" ]);
+                                                }
+                                                failure:^(NSURL *returnURL) {
+                                                  callback(@[ @"TASK_DUMPED", @"{\"success\": false}" ]);
+                                                }
+    ];
   }];
 }
 
