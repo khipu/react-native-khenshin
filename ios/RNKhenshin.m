@@ -47,13 +47,13 @@ RCT_EXPORT_METHOD(startPaymentById
     [KhenshinInterface startEngineWithPaymentExternalId:paymentId
                                          userIdentifier:@""
                                       isExternalPayment:NO
-                                               animated:YES
                                                 success:^(NSURL *returnURL) {
                                                   callback(@[ @"CONCILIATING", @"{\"success\": true}" ]);
                                                 }
                                                 failure:^(NSURL *returnURL) {
                                                   callback(@[ @"TASK_DUMPED", @"{\"success\": false}" ]);
                                                 }
+                                                animated:YES
     ];
   }];
 }
