@@ -18,15 +18,13 @@ import static android.app.Activity.RESULT_OK;
 
 public class RNKhenshinModule extends ReactContextBaseJavaModule implements ActivityEventListener {
   private static final String TAG = RNKhenshinModule.class.getName();
-  private Khenshin khenshin;
   private final ReactApplicationContext reactContext;
   private final int START_PAYMENT_REQUEST_CODE = 1001;
   private Callback callback;
 
-  public RNKhenshinModule(ReactApplicationContext reactContext, Khenshin khenshin) {
+  public RNKhenshinModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
-    this.khenshin = khenshin;
     this.reactContext.addActivityEventListener(this);
   }
 
@@ -38,7 +36,7 @@ public class RNKhenshinModule extends ReactContextBaseJavaModule implements Acti
   @ReactMethod
   public void startPaymentById(String paymentId, Callback callback) {
     this.callback = callback;
-    Intent intent = this.khenshin.getStartTaskIntent();
+    Intent intent = Khenshin.getInstance().getStartTaskIntent();
     intent.putExtra(KhenshinConstants.EXTRA_PAYMENT_ID, paymentId);
     intent.putExtra(KhenshinConstants.EXTRA_FORCE_UPDATE_PAYMENT, true);
     intent.putExtra("EXTRA_EXTERNAL_PAYMENT", false);

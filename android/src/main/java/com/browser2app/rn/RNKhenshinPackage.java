@@ -6,7 +6,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import com.browser2app.khenshin.KhenshinApplication;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -14,11 +13,9 @@ import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
 
 import com.browser2app.khenshin.Khenshin;
-import com.browser2app.khenshin.KhenshinInterface;
 
 
-public class RNKhenshinPackage implements ReactPackage, KhenshinApplication {
-    private Khenshin khenshin;
+public class RNKhenshinPackage implements ReactPackage {
     private Application app;
     RNKhenshinModule khenshinModule;
 
@@ -34,12 +31,12 @@ public class RNKhenshinPackage implements ReactPackage, KhenshinApplication {
         builder.setSkipExitPage(false);
         builder.setApplication(this.app);
         builder.setDebug(false);
-        this.khenshin = builder.build();
+        builder.build();
     }
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        khenshinModule = new RNKhenshinModule(reactContext, this.khenshin);
+        khenshinModule = new RNKhenshinModule(reactContext);
         return Arrays.<NativeModule>asList(khenshinModule);
     }
 
@@ -53,8 +50,4 @@ public class RNKhenshinPackage implements ReactPackage, KhenshinApplication {
         return Collections.emptyList();
     }
 
-    @Override
-    public KhenshinInterface getKhenshin() {
-        return this.khenshin;
-    }
 }
