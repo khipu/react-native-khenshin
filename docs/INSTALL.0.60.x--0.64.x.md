@@ -1,4 +1,4 @@
-# Install instructions for react-native from 0.60.x to 0.62.x
+# Install instructions for react-native from 0.60.x to 0.64.x
 
 ## iOS
 
@@ -23,7 +23,7 @@ project(':react-native-khenshin').projectDir = new File(rootProject.projectDir, 
 ### Add the following lines inside the dependencies block in `android/app/build.gradle`:
 
 ```
-implementation 'com.browser2app:khenshin:5.4.2'
+implementation 'com.browser2app:khenshin:+'
 implementation project(':react-native-khenshin')
 ```
 
@@ -42,42 +42,25 @@ allprojects {
 ```
 
 ### Add The following modifications in your `MainApplication.java`
-
 ```
-....
-import com.browser2app.khenshin.KhenshinApplication;
-import com.browser2app.khenshin.KhenshinInterface;
+...
 import com.browser2app.rn.RNKhenshinPackage;
+...
 
-// IMPORTANT!!!: Add ", KhenshinApplication" to the implements list
-public class MainApplication extends Application implements ReactApplication, KhenshinApplication {
-  // --> Add the following code 
-  private MainApplication mainApp;
-  private RNKhenshinPackage khipuPackage;
-
-  public MainApplication() {
-      mainApp = this;
-  }
-
-  @Override
-  public KhenshinInterface getKhenshin() {
-      return khipuPackage.getKhenshin();
-  }
-  // --> End
-  
-  ... 
+public MainApplication getMainApplication() {
+    return this;
 }
+...
 
 ```
 
-### Add the following code inside the `getPackages()` method
+#### Add the following code inside the `getPackages()` method
   
 ```
 @Override
 protected List<ReactPackage> getPackages() {
     //...
-    khipuPackage = new RNKhenshinPackage(mainApp);
-    packages.add(khipuPackage);
+    packages.add(new RNKhenshinPackage(getMainApplication()));
     return packages;
 }
 ```
