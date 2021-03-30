@@ -1,6 +1,6 @@
 {
   "name": "react-native-khenshin",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Wrapper react-native para la tecnología browser2app de khipu",
   "homepage": "https://github.com/khipu/react-native-khenshin",
   "documentation": "https://github.com/khipu/react-native-khenshin/blob/master/README.md",
@@ -14,7 +14,7 @@
     "browser2app"
   ],
   "peerDependencies": {
-    "react-native": "^0.41.2"
+    "react-native": "^0.62.2"
   },
   "devDependencies": {
     "react": "15.4.0",
