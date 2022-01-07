@@ -35,6 +35,7 @@ public class RNKhenshinModule extends ReactContextBaseJavaModule implements Acti
 
   @ReactMethod
   public void startPaymentById(String paymentId, Callback callback) {
+    Log(TAG, "the callback: " + callback!=null ? callback : 'null');
     this.callback = callback;
     Intent intent = Khenshin.getInstance().getStartTaskIntent();
     intent.putExtra(KhenshinConstants.EXTRA_PAYMENT_ID, paymentId);
@@ -59,9 +60,14 @@ public class RNKhenshinModule extends ReactContextBaseJavaModule implements Acti
           ? "{ \"paymentId\": \"" + data.getStringExtra(KhenshinConstants.EXTRA_PAYMENT_ID) + "\" }"
           : "{\"message\": \"" + data.getStringExtra(KhenshinConstants.EXTRA_RESULT_MESSAGE) + "\"}";
 
-      Log.d(TAG, exitStatus);
-      Log.d(TAG, result);
-      callback.invoke(exitStatus, result);
+      Log.d(TAG, "exit status: " + exitStatus);
+      Log.d(TAG, "result: " + result);
+      if(this.callback == null) {
+        Log.d(TAG, "callback is null!!")
+      } else {
+        Log.d(TAG, "will invoke callback");
+        this.callback.invoke(exitStatus, result);
+      }
     }
   }
 
