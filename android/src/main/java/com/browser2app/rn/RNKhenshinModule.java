@@ -53,22 +53,16 @@ public class RNKhenshinModule extends ReactContextBaseJavaModule implements Acti
     Log.d(TAG, "data: " + data);
     if (requestCode == START_PAYMENT_REQUEST_CODE && data != null) {
       String status = data.getStringExtra(KhenshinConstants.EXTRA_FAILURE_REASON);
-      String exitStatus = resultCode == RESULT_OK || status == "TASK_FINISHED"
-          ? "CONCILIATING"
-          : status;
-      String result = resultCode == RESULT_OK || status == "TASK_FINISHED"
-          ? "{ \"paymentId\": \"" + data.getStringExtra(KhenshinConstants.EXTRA_PAYMENT_ID) + "\" }"
-          : "{\"message\": \"" + data.getStringExtra(KhenshinConstants.EXTRA_RESULT_MESSAGE) + "\"}";
+      String exitStatus = resultCode == RESULT_OK
+              ? "CONCILIATING"
+              : status;
+      String result = resultCode == RESULT_OK
+              ? "{\"paymentId\": \"" + data.getStringExtra(KhenshinConstants.EXTRA_PAYMENT_ID) + "\" }"
+              : "{\"message\": \"" + data.getStringExtra(KhenshinConstants.EXTRA_RESULT_MESSAGE) + "\"}";
 
-      Log.d(TAG, "exit status: " + exitStatus);
-      Log.d(TAG, "result: " + result);
-      if(this.callback == null) {
-        Log.d(TAG, "callback is null!!")
-      } else {
-        Log.d(TAG, "will invoke callback");
-        this.callback.invoke(exitStatus, result);
-      }
-    }
+      Log.d(TAG, exitStatus);
+      Log.d(TAG, result);
+      this.callback.invoke(exitStatus, result);
   }
 
   @Override
