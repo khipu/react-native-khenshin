@@ -63,6 +63,7 @@ public class RNKhenshinModule extends ReactContextBaseJavaModule implements Acti
       Log.d(TAG, exitStatus);
       Log.d(TAG, result);
       this.callback.invoke(exitStatus, result);
+    }
   }
 
   @Override
