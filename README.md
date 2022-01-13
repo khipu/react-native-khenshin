@@ -7,7 +7,7 @@
 ## Install and configure
 
 - [x] [react-native 0.59.x](docs/INSTALL.0.59.x.md)
-- [x] [react-native 0.60.x to 0.64.x](docs/INSTALL.0.60.x--0.66.x.md)
+- [x] [react-native 0.60.x to 0.66.x](docs/INSTALL.0.60.x--0.66.x.md)
 
 ## Usage
 
