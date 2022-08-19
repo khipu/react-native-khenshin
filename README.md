@@ -2,7 +2,7 @@
 
 ## Add the library to your project
 
-    npm install https://github.com/khipu/react-native-khenshin#1.0.6 --save
+    npm install https://github.com/khipu/react-native-khenshin --save --force
 
 ## Install and configure
 
@@ -44,3 +44,6 @@ export default class MyApp extends React.Component {
 }
 
 ```
+## Example project
+
+- [react-native-khenshin-demo](https://github.com/khipu/react-native-khenshin-demo)
