@@ -2,6 +2,8 @@
 
 ## iOS
 
+If you are using an m1 or m2 Macos please run this in a terminal using Rosetta
+
 Run pod install
 
     cd ios
