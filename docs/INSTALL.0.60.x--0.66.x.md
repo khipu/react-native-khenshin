@@ -1,8 +1,6 @@
-# Install instructions for react-native from 0.60.x to 0.64.x
+# Install instructions for react-native from 0.60.x to 0.71.x
 
 ## iOS
-
-> iOS implementation is still in progress
 
 Run pod install
 
