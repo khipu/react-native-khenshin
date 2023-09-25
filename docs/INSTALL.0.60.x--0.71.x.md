@@ -1,5 +1,10 @@
 # Install instructions for react-native from 0.60.x to 0.71.x
 
+
+> To better customize the integration we encourage you to clone this repo and use the documentation for [Java](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-java.md), [Kotlin](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-kotlin.md), [ObjC](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-objc.md) and [Swift](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-swift.md)
+
+
+
 ## iOS
 
 If you are using an m1 or m2 Macos please run this in a terminal using Rosetta
@@ -80,3 +85,4 @@ module.exports = {
 };
 
 ```
+
