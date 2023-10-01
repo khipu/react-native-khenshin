@@ -3,6 +3,7 @@
 
 > To better customize the integration we encourage you to clone this repo and use the documentation for [Java](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-java.md), [Kotlin](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-kotlin.md), [ObjC](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-objc.md) and [Swift](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-swift.md)
 
+In particular, we encourage you to customize the files `android/src/res/values/colors.xml` and `android/src/res/layouts/*.xml` for android and `ios/RNKhenshin.m` and `ios/views/*` for iOS.
 
 
 ## iOS

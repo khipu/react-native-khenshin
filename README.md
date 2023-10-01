@@ -12,12 +12,12 @@
 
 ```typescript
 import React from 'react';
-import {SafeAreaView, TouchableOpacity, Text} from 'react-native';
+import {SafeAreaView, ScrollView, Button} from 'react-native';
 import Khipu from 'react-native-khenshin';
 
 function App(this: any): JSX.Element {
     const onStartPayment = () => {
-        Khipu.startPaymentById('paymentId')
+        Khipu.startPaymentById('mboyd2tem42r')
             .then(({status, result}) => {
                 if (status === 'CONCILIATING') {
                     // khipu is conciliating the payment
@@ -34,12 +34,14 @@ function App(this: any): JSX.Element {
     return (
         <SafeAreaView>
             <ScrollView>
-                <Header />
-                <Button title={'pagar'} onPress={onStartPayment}></Button>
+                <Button title={'pagar'} onPress={onStartPayment} />
             </ScrollView>
         </SafeAreaView>
-    );
+);
 }
+
+export default App;
+
 ```
 ## Example project
 
