@@ -27,7 +27,7 @@
       builder.secondaryColor = [welf secondaryColor];
       builder.continueButtonTextTintColor = [UIColor blackColor];
       builder.navigationBarTextTint = [UIColor blackColor];
-      builder.barTintColor = [UIColor whiteColor];
+      builder.barTintColor = [welf barTintColor];
       builder.processHeader = [[[NSBundle mainBundle] loadNibNamed:@"CustomPaymentProcessHeader" owner:self options:nil] objectAtIndex:0];
     }];
   } @catch (NSException *exception) {
@@ -48,6 +48,13 @@
   return [UIColor colorWithRed:183 / 255.0
                          green:36 / 255.0
                           blue:51 / 255.0
+                         alpha:1.0];
+}
+
+- (UIColor *)barTintColor {
+  return [UIColor colorWithRed:249 / 255.0
+                         green:249 / 255.0
+                          blue:249 / 255.0
                          alpha:1.0];
 }
 

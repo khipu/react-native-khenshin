@@ -8,6 +8,6 @@
     <color name="khenshin_button_text_color">#000000</color>
 
     <color name="khenshin_toolbar_text">#000000</color>
-    <color name="khenshin_toolbar_background">@color/white</color>
+    <color name="khenshin_toolbar_background">#F9F9F9</color>
     <color name="khenshin_toolbar_background_dark">@color/white</color>
 </resources>
