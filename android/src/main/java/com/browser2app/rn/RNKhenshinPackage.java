@@ -31,6 +31,9 @@ public class RNKhenshinPackage implements ReactPackage {
         builder.setSkipExitPage(false);
         builder.setApplication(this.app);
         builder.setDebug(false);
+        builder.setFontResourceId(R.font.nunitosans);
+        builder.setMainButtonStyle(Khenshin.CONTINUE_BUTTON_IN_FORM);
+        builder.setHideWebAddressInformationInForm(true);
         builder.build();
     }
 

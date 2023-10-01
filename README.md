@@ -2,12 +2,11 @@
 
 ## Add the library to your project
 
-    npm install https://github.com/khipu/react-native-khenshin --save --force
+    yarn add https://github.com/khipu/react-native-khenshin
 
 ## Install and configure
 
-- [x] [react-native 0.59.x](docs/INSTALL.0.59.x.md)
-- [x] [react-native 0.60.x to 0.71.x](docs/INSTALL.0.60.x--0.71.x.md)
+- [x] [react-native 0.60.x to 0.72.x](docs/INSTALL.0.60.x--0.72.x.md)
 
 ## Usage
 

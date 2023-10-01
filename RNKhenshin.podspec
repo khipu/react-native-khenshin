@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   s.compiler_flags         = '-Wno-nullability-completeness'
   s.source                 = source
   s.source_files           = "ios/**/*.{h,m}"
+  s.resources              = "ios/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,ttf}"
   s.preserve_paths         = "package.json", "ios", "index.js"
   s.header_dir             = "RNKhenshin"
   s.pod_target_xcconfig    = {
@@ -31,6 +32,6 @@ Pod::Spec.new do |s|
                                "CLANG_CXX_LANGUAGE_STANDARD" => "c++14",
                                "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/RNKhenshin\""
                              }
-  s.dependency "khenshin"
+  s.dependency "khenshin", "1.751"
   s.dependency "React-Core"
 end

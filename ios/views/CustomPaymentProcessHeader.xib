@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomPaymentProcessHeader">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="112"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="30" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIA-zX-TEt" userLabel="Merchant Image">
+                    <rect key="frame" x="8" y="10" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="Rjf-VH-9Yy"/>
+                        <constraint firstAttribute="width" constant="70" id="SQk-o9-jGz"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merchant" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3F0-9A-hr6">
+                    <rect key="frame" x="86" y="10" width="83.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motivo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeM-US-PuL">
+                    <rect key="frame" x="86" y="42" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGk-BC-DXq">
+                    <rect key="frame" x="176" y="42" width="188" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pi-Rs-mdh">
+                    <rect key="frame" x="86" y="70.5" width="49" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwn-60-nts">
+                    <rect key="frame" x="176" y="70.5" width="188" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5pi-Rs-mdh" firstAttribute="leading" secondItem="nIA-zX-TEt" secondAttribute="trailing" constant="8" symbolic="YES" id="2NY-9R-bdy"/>
+                <constraint firstItem="NeM-US-PuL" firstAttribute="leading" secondItem="nIA-zX-TEt" secondAttribute="trailing" constant="8" symbolic="YES" id="5iD-fv-grK"/>
+                <constraint firstItem="HGk-BC-DXq" firstAttribute="top" secondItem="3F0-9A-hr6" secondAttribute="bottom" constant="8" symbolic="YES" id="BrQ-Mr-zkb"/>
+                <constraint firstItem="3F0-9A-hr6" firstAttribute="leading" secondItem="nIA-zX-TEt" secondAttribute="trailing" constant="8" symbolic="YES" id="J30-aQ-GXc"/>
+                <constraint firstItem="nwn-60-nts" firstAttribute="leading" secondItem="5pi-Rs-mdh" secondAttribute="leading" constant="90" id="YQV-oe-v3X"/>
+                <constraint firstAttribute="trailing" secondItem="nwn-60-nts" secondAttribute="trailing" constant="20" symbolic="YES" id="cdu-DG-a6x"/>
+                <constraint firstItem="3F0-9A-hr6" firstAttribute="top" secondItem="nIA-zX-TEt" secondAttribute="top" id="eHF-jk-tWP"/>
+                <constraint firstItem="nwn-60-nts" firstAttribute="top" secondItem="HGk-BC-DXq" secondAttribute="bottom" constant="8" symbolic="YES" id="fHA-X9-IBo"/>
+                <constraint firstAttribute="bottom" secondItem="nIA-zX-TEt" secondAttribute="bottom" priority="750" constant="10" id="fo2-mo-bD9"/>
+                <constraint firstAttribute="trailing" secondItem="HGk-BC-DXq" secondAttribute="trailing" constant="20" symbolic="YES" id="n9Z-eT-qk2"/>
+                <constraint firstItem="NeM-US-PuL" firstAttribute="top" secondItem="3F0-9A-hr6" secondAttribute="bottom" constant="8" symbolic="YES" id="uJk-hX-DJD"/>
+                <constraint firstItem="5pi-Rs-mdh" firstAttribute="top" secondItem="nwn-60-nts" secondAttribute="top" id="ucg-bp-Xz3"/>
+                <constraint firstItem="nIA-zX-TEt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="yxi-Ci-LQH"/>
+                <constraint firstItem="HGk-BC-DXq" firstAttribute="leading" secondItem="NeM-US-PuL" secondAttribute="leading" constant="90" id="z2m-KE-sAP"/>
+                <constraint firstItem="nIA-zX-TEt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="zqf-vE-A5v"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="amount" destination="nwn-60-nts" id="SZK-kc-5Xc"/>
+                <outlet property="merchantImageView" destination="nIA-zX-TEt" id="th0-Ss-RDq"/>
+                <outlet property="merchantName" destination="3F0-9A-hr6" id="Jd7-IH-fZD"/>
+                <outlet property="subject" destination="HGk-BC-DXq" id="JgB-N2-v1Y"/>
+            </connections>
+            <point key="canvasLocation" x="84.799999999999997" y="71.064467766116948"/>
+        </view>
+    </objects>
+</document>

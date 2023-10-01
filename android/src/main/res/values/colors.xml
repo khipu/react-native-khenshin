@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="khenshin_primary">#FFDD00</color>
+    <color name="khenshin_primary_dark">#FFDD00</color>
+    <color name="khenshin_primary_text">#000000</color>
+    <color name="khenshin_accent">#B72433</color>
+
+    <color name="khenshin_button_text_color">#000000</color>
+
+    <color name="khenshin_toolbar_text">#000000</color>
+    <color name="khenshin_toolbar_background">@color/white</color>
+    <color name="khenshin_toolbar_background_dark">@color/white</color>
+</resources>

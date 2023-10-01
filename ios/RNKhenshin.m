@@ -12,23 +12,43 @@
 }
 
 - (void) configureEngine {
+  __typeof(self) __weak welf = self;
+
+
   @try {
     [KhenshinInterface initWithBuilderBlock:^(KhenshinBuilder *builder) {
       builder.APIUrl = @"https://khipu.com/app/enc/";
-      builder.allowCredentialsSaving = YES;
       builder.keepCookies = NO;
-      builder.decimalSeparator = @".";
-      builder.groupingSeparator = @",";
-      builder.skipExitPage = NO;
-      builder.processHeader = nil;
+      builder.allowCredentialsSaving = YES;
+      builder.mainButtonStyle = KHMainButtonFatOnForm;
       builder.hideWebAddressInformationInForm = YES;
-      //builder.automatonTimeout = 90.0;
+      builder.principalColor = [welf principalColor];
+      builder.darkerPrincipalColor = [welf principalColor];
+      builder.secondaryColor = [welf secondaryColor];
+      builder.continueButtonTextTintColor = [UIColor blackColor];
+      builder.navigationBarTextTint = [UIColor blackColor];
+      builder.barTintColor = [UIColor whiteColor];
+      builder.processHeader = [[[NSBundle mainBundle] loadNibNamed:@"CustomPaymentProcessHeader" owner:self options:nil] objectAtIndex:0];
     }];
   } @catch (NSException *exception) {
     NSLog(@"Khenshin failed to init: %@", [exception reason]);
   }
-
+  [KhenshinInterface setPreferredStatusBarStyle:UIStatusBarStyleLightContent];
   [KhenshinInterface setAutomatonTimeout:90.0];
+}
+
+- (UIColor *)principalColor {
+  return [UIColor colorWithRed:255 / 255.0
+                         green:221 / 255.0
+                          blue:0 / 255.0
+                         alpha:1.0];
+}
+
+- (UIColor *)secondaryColor {
+  return [UIColor colorWithRed:183 / 255.0
+                         green:36 / 255.0
+                          blue:51 / 255.0
+                         alpha:1.0];
 }
 
 RCT_EXPORT_MODULE()
