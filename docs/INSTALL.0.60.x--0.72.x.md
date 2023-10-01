@@ -1,4 +1,4 @@
-# Install instructions for react-native from 0.60.x to 0.71.x
+# Install instructions for react-native from 0.60.x to 0.72.x
 
 
 > To better customize the integration we encourage you to clone this repo and use the documentation for [Java](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-java.md), [Kotlin](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-kotlin.md), [ObjC](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-objc.md) and [Swift](https://github.com/khipu/khipu-inside-demo/blob/master/authorize-payment-swift.md)
