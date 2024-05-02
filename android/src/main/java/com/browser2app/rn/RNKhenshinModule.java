@@ -38,7 +38,6 @@ public class RNKhenshinModule extends ReactContextBaseJavaModule implements Acti
     this.callback = callback;
     Intent intent = Khenshin.getInstance().getStartTaskIntent();
     intent.putExtra(KhenshinConstants.EXTRA_PAYMENT_ID, paymentId);
-    intent.putExtra(KhenshinConstants.EXTRA_FORCE_UPDATE_PAYMENT, true);
     intent.putExtra("EXTRA_EXTERNAL_PAYMENT", false);
     intent.putExtra("EXTRA_IGNORE_RETURN_URL", true);
     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
