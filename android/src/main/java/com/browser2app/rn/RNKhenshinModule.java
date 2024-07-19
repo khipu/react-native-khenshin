@@ -49,7 +49,7 @@ public class RNKhenshinModule extends ReactContextBaseJavaModule implements Acti
     Log.d(TAG, "requestCode: " + requestCode);
     Log.d(TAG, "resultCode: " + resultCode);
     Log.d(TAG, "data: " + data);
-    if (requestCode == START_PAYMENT_REQUEST_CODE && data != null) {
+    if (this.callback != null && requestCode == START_PAYMENT_REQUEST_CODE && data != null) {
       String status = data.getStringExtra(KhenshinConstants.EXTRA_FAILURE_REASON);
       String exitStatus = resultCode == RESULT_OK
               ? "CONCILIATING"
