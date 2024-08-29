@@ -32,6 +32,6 @@ Pod::Spec.new do |s|
                                "CLANG_CXX_LANGUAGE_STANDARD" => "c++14",
                                "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/RNKhenshin\""
                              }
-  s.dependency "khenshin"
+  s.dependency "khenshin", "1.757"
   s.dependency "React-Core"
 end
