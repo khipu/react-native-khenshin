@@ -1,6 +1,6 @@
 # react-native-khenshin
 
-:warning: **Deprecated**: please use the new and improved [react-native-khipu plugin](https://www.npmjs.com/package/react-native-khipu)!
+:warning: **Deprecated**: please use the new and improved [react-native-khipu plugin](https://www.npmjs.com/package/react-native-khipu)! :warning:
 
 ## Add the library to your project
 
